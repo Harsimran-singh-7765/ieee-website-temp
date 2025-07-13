@@ -38,7 +38,7 @@
       let model;
 
       const loader = new GLTFLoader();
-      loader.load("/robot_animation_1.glb", (gltf) => {
+      loader.load("public/robot_animation_1.glb", (gltf) => {
         model = gltf.scene;
         model.scale.set(2, 2, 2);
         model.position.set(9, -6, -6);
