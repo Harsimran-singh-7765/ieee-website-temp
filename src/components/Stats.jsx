@@ -103,7 +103,9 @@ const Stats = () => {
               src={`/img/${stat.img}`}
               alt={stat.label}
               className="card__bg"
+              loading="lazy"
             />
+
           </article>
         ))}
       </div>
