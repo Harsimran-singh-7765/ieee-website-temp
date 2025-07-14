@@ -72,7 +72,7 @@ const Footer = () => {
         <div className="top">
           {/* Logo */}
           <div className="one same">
-            <img className="logo" src="public/logo.png" alt="Logo" />
+            <img className="logo" src="/logo.png" alt="Logo" />
           </div>
 
           {/* Contact Us */}
