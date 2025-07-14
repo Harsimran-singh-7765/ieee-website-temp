@@ -8,43 +8,43 @@ const EventsSlider = () => {
 
   const images = [
     {
-      mainImg: "public/big-data-7644533_1280.jpg",
-      hoverImg: "public/278973277_5040470592655073_248035920281809986_n.jpg",
+      mainImg: "/big-data-7644533_1280.jpg",
+      hoverImg: "/278973277_5040470592655073_248035920281809986_n.jpg",
       title: "IEEE Day",
       content: "Celebrating technology innovation",
       link: "https://www.instagram.com/ieeesbjiit?igsh=MWdyeHQyNDd3OWw5eg=="
     },
     {
-      mainImg: "/public/big-data-7644538_1280.jpg",
-      hoverImg: "public/WhatsApp Image 2025-07-08 at 17.19.06_2ade0cac.jpg",
+      mainImg: "//big-data-7644538_1280.jpg",
+      hoverImg: "/WhatsApp Image 2025-07-08 at 17.19.06_2ade0cac.jpg",
       title: "Tech Blocks",
       content: "Building the future together",
       link: "https://www.instagram.com/p/C_27IinBBIE/?igsh=MTRkdGh5NWV3MnQ1eg=="
     },
     {
-      mainImg: "public/big-data-7644543_1280.jpg",
-      hoverImg: "public/WhatsApp Image 2025-07-08 at 17.18.30_71910d64.jpg",
+      mainImg: "/big-data-7644543_1280.jpg",
+      hoverImg: "/WhatsApp Image 2025-07-08 at 17.18.30_71910d64.jpg",
       title: "Xenith",
       content: "Our flagship event",
       link: "https://www.instagram.com/p/DE-AsaBSN1C/?igsh=bmQzcWk5dDRibXl4"
     },
     {
-      mainImg: "public/technology-8280863_1280.jpg",
-      hoverImg: "public/Untitled23_20250712095144.png",
+      mainImg: "/technology-8280863_1280.jpg",
+      hoverImg: "/Untitled23_20250712095144.png",
       title: "Quizzes",
       content: "Test your knowledge",
       link: "https://www.instagram.com/ieeesbjiit?igsh=MWdyeHQyNDd3OWw5eg=="
     },
     {
-      mainImg: "public/technology-7111757_1280.jpg",
-      hoverImg: "public/WhatsApp Image 2025-07-08 at 17.20.15_a95c6bdd.jpg",
+      mainImg: "/technology-7111757_1280.jpg",
+      hoverImg: "/WhatsApp Image 2025-07-08 at 17.20.15_a95c6bdd.jpg",
       title: "Webinars",
       content: "Learn from experts",
       link: "https://instagram.com/ieeesbjiit/p/DLgzqvVx8JC/"
     },
     {
-      mainImg: "public/technology-8280863_1280.jpg",
-      hoverImg: "public/WhatsApp Image 2025-07-08 at 17.19.57_556e6020.jpg",
+      mainImg: "/technology-8280863_1280.jpg",
+      hoverImg: "/WhatsApp Image 2025-07-08 at 17.19.57_556e6020.jpg",
       title: "Workshops",
       content: "Hands-on learning",
       link: "https://www.instagram.com/ieeesbjiit?igsh=MWdyeHQyNDd3OWw5eg=="
