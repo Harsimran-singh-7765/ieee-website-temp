@@ -192,7 +192,7 @@ const Footer = () => {
         style={{ display: showScroll ? "block" : "none" }}
         onClick={handleScrollTop}
       >
-        <img id="robo" src="public/back2.png" alt="Go to top" />
+        <img id="robo" src="/back2.png" alt="Go to top" />
       </button>
     </div>
   );
