@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import BackgroundWrapper from './components/BackgroundWrapper';
 import Navbar from './components/Navbar';
-import About from './components/About';
+import About from './components/about';
 import Stats from './components/Stats';
 import Contact from './components/Contact';
 import WIE from './components/WIE';
@@ -13,6 +13,7 @@ import CreatorsCTA from './components/CreaterCTA';
 import Preloader from './components/Preloader';
 import Slider from './components/EventsSlider';
 import Gallery from './components/Gallery';
+import AtomCursor from './components/AtomCursor'
 import './App.css';
 
 function App() {
@@ -88,6 +89,7 @@ function App() {
         <BackgroundWrapper>
           <div className="App">
             <ThreeDModel />
+            <AtomCursor />
             <Navbar />
 
             
@@ -95,6 +97,10 @@ function App() {
           <main>
             <section id="HOME" className="section">
               <Hero />
+            </section>
+
+            <section id="stats" className="section">
+              <About />
             </section>
 
             <section id="stats" className="section">

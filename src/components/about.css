@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+.aboutus {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw;
+}
+
+.aboutus-container {
+  background-color: rgba(0, 0, 0, 0.09);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 50px 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.about-section {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  padding-bottom: 40px;
+}
+
+.about-us-container {
+  font-size: 60px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+#about {
+  color: white;
+}
+
+#us {
+  background: linear-gradient(to right, #00fff7, #3a8eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.full-width-line {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  height: 4px;
+  background-color: #355fc2
+  ;
+}
+
+#about-us-content {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 25px;
+  color: rgba(171, 178, 183, 0.884);
+  margin-top: 40px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-us-container {
+    font-size: 40px;
+  }
+
+  #about-us-content {
+    font-size: 18px;
+  }
+
+  .full-width-line {
+    height: 2px;
+  }
+
+  .aboutus-container {
+    padding: 30px 20px;
+  }
+}
