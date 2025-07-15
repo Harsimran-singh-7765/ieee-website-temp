@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: flex-start;
   padding-top: 4rem;
-  background: rgba(0,0,0,.5); 
+  background: transparent
   min-height: 100vh;
   position: relative;
 }

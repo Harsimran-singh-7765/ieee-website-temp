@@ -22,7 +22,7 @@
         0.1,
         1000
       );
-      camera.position.z = 30;
+      camera.position.z = 40;
 
       const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
