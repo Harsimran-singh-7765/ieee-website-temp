@@ -75,3 +75,28 @@
   margin-top: 0.5rem;
   color: #cbd5e1;
 }
+
+
+@media (max-width: 768px) {
+  .card__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+  }
+
+  .card__article {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .number {
+    font-size: 2.5rem;
+  }
+
+  .label {
+    font-size: 1.1rem;
+  }
+}

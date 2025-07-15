@@ -1,49 +1,49 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
+import { ThpaceGL } from "thpace";  // ✅ Using local install, not CDN
+import * as THREE from "three";
 
 const BackgroundWrapper = ({ children }) => {
-  const vantaRef = useRef(null);
-  const [vantaEffect, setVantaEffect] = useState(null);
+  const canvasRef = useRef(null);
 
   useEffect(() => {
-    // Delay Vanta setup to give DOM time + reduce jank
-    const timeout = setTimeout(() => {
-      if (!vantaEffect && window.VANTA && window.VANTA.TOPOLOGY) {
-        setVantaEffect(
-          window.VANTA.TOPOLOGY({
-            el: vantaRef.current,
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            scale: 1.0,
-            scaleMobile: 1.5,
-            color: 0x1891f0,
-            backgroundColor: 0x000000,
-            points: 5.0,         // 🔽 fewer elements
-            spacing: 30.0,       // 🔼 wider spacing
-            showDots: true,
-            // frameRate: 30,    // NOTE: Not officially supported but can try
-          })
-        );
-      }
-    }, 100); // small delay helps smooth things out
+    let thpaceInstance;
+
+    if (canvasRef.current) {
+      thpaceInstance = ThpaceGL.create(canvasRef.current, {
+        colors: ["#ff0000ff", "#ffffffff", "#1e1e2f"], // 🖤💙 color scheme
+        triangleSize: 100,
+        bleed: 50,
+        noise: 20,
+        noiseScalar: 1.5,
+        pointVariationX: 25,
+        pointVariationY: 25,
+        pointAnimationSpeed: 0.1,
+        particleCount: 50,
+        particleOpacity: 0.4,
+        particleRadius: 2,
+        maxFps: 45,
+        THREE, 
+      });
+    }
 
     return () => {
-      clearTimeout(timeout);
-      if (vantaEffect) vantaEffect.destroy();
+      if (thpaceInstance) thpaceInstance.stop(); // 💣 clean exit
     };
-  }, [vantaEffect]);
+  }, []);
 
   return (
-    <div
-      ref={vantaRef}
-      style={{
-        minHeight: "100vh",
-        width: "100%",
-        position: "relative",
-        overflow: "hidden",
-        backgroundColor: "#000", // fallback
-      }}
-    >
+    <div style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}>
+      <canvas
+        ref={canvasRef}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+        }}
+      />
       <div style={{ position: "relative", zIndex: 1 }}>
         {children}
       </div>
