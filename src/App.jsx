@@ -13,6 +13,7 @@ import Preloader from './components/Preloader';
 import Slider from './components/EventsSlider';
 import Gallery from './components/Gallery';
 import AtomCursor from './components/AtomCursor';
+import Backgroundwrapper from './components/BackgroundWrapper';
 import './App.css';
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
       {!isLoaded && <Preloader onFinish={handlePreloaderFinish} />}
 
       {isLoaded && (
+        <Backgroundwrapper >
         <div className="App">
+          
           <ThreeDModel />
           <AtomCursor />
           <Navbar />
@@ -64,6 +67,7 @@ function App() {
 
           <Footer />
         </div>
+        </Backgroundwrapper>
       )}
     </>
   );

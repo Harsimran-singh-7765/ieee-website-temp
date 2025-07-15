@@ -1,36 +1,34 @@
 import React, { useEffect, useRef, useState } from "react";
-import * as THREE from "three";
 
 const BackgroundWrapper = ({ children }) => {
   const vantaRef = useRef(null);
   const [vantaEffect, setVantaEffect] = useState(null);
 
   useEffect(() => {
-    if (!vantaEffect && window.VANTA && window.VANTA.NET) {
-      setVantaEffect(
-        window.VANTA.NET({
-          el: vantaRef.current,
-          THREE: THREE,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0x2e3636,            
-          backgroundColor: 0x0b0b0e,  
-          points: 10.0,              
-          maxDistance: 20.0,         
-          spacing: 20.0,             
-          showDots: true,           
-        //   showLines: true,
-          backgroundAlpha: 1.0,
-        })
-      );
-    }
+    // Delay Vanta setup to give DOM time + reduce jank
+    const timeout = setTimeout(() => {
+      if (!vantaEffect && window.VANTA && window.VANTA.TOPOLOGY) {
+        setVantaEffect(
+          window.VANTA.TOPOLOGY({
+            el: vantaRef.current,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            color: 0x1891f0,
+            backgroundColor: 0x000000,
+            points: 6.0,         // 🔽 fewer elements
+            spacing: 30.0,       // 🔼 wider spacing
+            showDots: true,
+            // frameRate: 30,    // NOTE: Not officially supported but can try
+          })
+        );
+      }
+    }, 100); // small delay helps smooth things out
 
     return () => {
+      clearTimeout(timeout);
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect]);
@@ -43,15 +41,10 @@ const BackgroundWrapper = ({ children }) => {
         width: "100%",
         position: "relative",
         overflow: "hidden",
-        backgroundColor: "black",
+        backgroundColor: "#000", // fallback
       }}
     >
-      <div
-        style={{
-          position: "relative",
-          zIndex: 1,
-        }}
-      >
+      <div style={{ position: "relative", zIndex: 1 }}>
         {children}
       </div>
     </div>
