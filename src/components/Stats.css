@@ -42,14 +42,13 @@
   object-fit: cover;
   z-index: -1;
 
-  filter: blur(10px) brightness(0.5);
+  filter: blur(10px) brightness(0.5) grayscale(1);
   transform: scale(1.15);
   transition: all 0.4s ease;
 }
 
-
 .card__article:hover .card__bg {
-  filter: blur(0px) brightness(1);
+  filter: blur(0px) brightness(1) grayscale(0);
   transform: scale(1);
 }
 

@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Teams.css";
-import ThreeDModel from "../components/ThreeDModel"; // ✅ Adjust path as per your project
 
 const imageList = [
   "AsthaKumari.png",
@@ -24,9 +23,12 @@ const imageList = [
 ];
 
 const Teams = () => {
+  const sliderRef = useRef(null);
+  const [isStopped, setIsStopped] = useState(false);
+
   useEffect(() => {
-    const slider = document.querySelector(".slider");
-    const items = document.querySelectorAll(".slider .item");
+    const slider = sliderRef.current;
+    const items = slider.querySelectorAll(".item");
     const quantity = items.length;
 
     function getCurrentRotationY(el) {
@@ -54,40 +56,56 @@ const Teams = () => {
       });
     }
 
-    const interval = setInterval(updateVisibleItems, 30);
+    updateVisibleItems(); // initial
 
-    const handleMouseOver = (e) => {
-      if (e.target.closest(".item.visible")) {
-        slider.style.animationPlayState = "paused";
-      }
-    };
-    const handleMouseOut = (e) => {
-      if (e.target.closest(".item.visible")) {
-        slider.style.animationPlayState = "running";
-      }
-    };
+    const interval = setInterval(updateVisibleItems, 100);
 
-    slider.addEventListener("mouseover", handleMouseOver);
-    slider.addEventListener("mouseout", handleMouseOut);
+    items.forEach((item) => {
+      item.addEventListener("click", () => {
+        setIsStopped(true);
+      });
+    });
 
-    return () => {
-      clearInterval(interval);
-      slider.removeEventListener("mouseover", handleMouseOver);
-      slider.removeEventListener("mouseout", handleMouseOut);
-    };
+    return () => clearInterval(interval);
   }, []);
+
+  const handleMouseEnter = () => {
+    if (!isStopped && sliderRef.current) {
+      sliderRef.current.style.animationPlayState = "paused";
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isStopped && sliderRef.current) {
+      sliderRef.current.style.animationPlayState = "running";
+    }
+  };
 
   return (
     <div className="teams-wrapper">
       <h2 className="teams-heading">OUR TEAM</h2>
       <div className="teams-section">
         <div className="banner">
-          
- 
-          <div className="slider" style={{ "--quantity": imageList.length }}>
+          <div
+            ref={sliderRef}
+            className="slider"
+            style={{
+              "--quantity": imageList.length,
+              animationPlayState: isStopped ? "paused" : "running",
+            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             {imageList.map((img, idx) => (
-              <div className="item" key={idx} style={{ "--position": idx + 1 }}>
-                <img src={`/images-teams/${img}`} alt={`Team Member ${idx + 1}`} />
+              <div
+                className="item visible"
+                key={idx}
+                style={{ "--position": idx + 1 }}
+              >
+                <img
+                  src={`/images-teams/${img}`}
+                  alt={`Team Member ${idx + 1}`}
+                />
               </div>
             ))}
           </div>
