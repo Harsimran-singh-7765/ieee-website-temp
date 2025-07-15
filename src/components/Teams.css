@@ -25,7 +25,7 @@
 @media screen and (max-width: 767px) {
   .teams-heading {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 .teams-section {
@@ -94,33 +94,20 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .banner .slider {
-    width: 120px;
-    height: 160px;
-    left: calc(50% - 60px);
+  .banner {
+    height: 120vh;
   }
-  .banner .slider .item {
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(320px);
-  }
-  .banner .slider .item.visible:hover {
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(340px) scale(0.95);
-  }
-}
 
-@media screen and (max-width: 767px) {
   .banner .slider {
-    width: 80px;
-    height: 110px;
-    left: calc(50% - 40px);
+    width: 125px;
+    height: 120px;
+    left: calc(50% - 50px);
   }
   .banner .slider .item {
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(190px);
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(380px);
   }
-  .banner .slider .item.visible:hover {
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(210px) scale(0.95);
+  .banner .slider .item.touched {
+  transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px) scale(1.05);
+  z-index: 10;
   }
 }
