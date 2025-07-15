@@ -15,10 +15,10 @@ const BackgroundWrapper = ({ children }) => {
             touchControls: true,
             gyroControls: false,
             scale: 1.0,
-            scaleMobile: 1.0,
+            scaleMobile: 1.5,
             color: 0x1891f0,
             backgroundColor: 0x000000,
-            points: 6.0,         // 🔽 fewer elements
+            points: 5.0,         // 🔽 fewer elements
             spacing: 30.0,       // 🔼 wider spacing
             showDots: true,
             // frameRate: 30,    // NOTE: Not officially supported but can try

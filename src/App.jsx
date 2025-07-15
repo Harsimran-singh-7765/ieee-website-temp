@@ -32,7 +32,7 @@ function App() {
         <div className="App">
           
           <ThreeDModel />
-          <AtomCursor />
+          {/* <AtomCursor /> */}
           <Navbar />
 
           <main>
