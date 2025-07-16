@@ -118,3 +118,33 @@
   margin-top: 0.5rem;
   color: #cbd5e1;
 }
+
+@media (max-width: 450px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .stats-heading {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card__article {
+    width: 100%;
+    max-width: 160px;
+    height: 240px;
+    padding: 1.5rem 1rem;
+    border-radius: 0.8rem;
+  }
+
+  .number {
+    font-size: 1.8rem;
+  }
+
+  .label {
+    font-size: 0.9rem;
+  }
+}

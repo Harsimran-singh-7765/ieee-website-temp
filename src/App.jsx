@@ -40,7 +40,7 @@ function App() {
               <Hero />
             </section>
 
-            <section id="ABOUT" className="section">
+            <section id="About" className="section">
               <About />
             </section>
 
