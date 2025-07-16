@@ -83,7 +83,7 @@ const Stats = () => {
 
   return (
     <div className="stats-wrapper">
-      <h2 className="stats-heading">OUR STATS</h2>
+      <h2 className="stats-heading">Highlights from the Last Year</h2>
     <div className="stats-container">
       <div className="card__container">
         {statsData.map((stat, index) => (
