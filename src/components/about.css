@@ -26,24 +26,23 @@
   position: relative;
   width: 100%;
   background-color: transparent;
-  padding-bottom: 40px;
 }
 
 .about-us-container {
-  font-size: 60px;
-  font-family: 'Orbitron', sans-serif;
+  font-size: 80px;
+  /* font-family: 'Orbitron', sans-serif; */
   font-weight: 600;
   text-align: center;
 }
 
 #about {
   color: white;
+  text-shadow: 0 0 15px #7f00ff;
 }
 
 #us {
-  background: linear-gradient(to right, #00fff7, #3a8eff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: rgb(55, 110, 203);
+   text-shadow: 0 0 15px rgb(22, 27, 120);
 }
 
 .full-width-line {
@@ -53,21 +52,25 @@
   transform: translateX(-50%);
   width: 95%;
   height: 4px;
-  background-color: #355fc2
-  ;
+  background-color: #ebf1f3;
 }
 
 #about-us-content {
   font-family: 'Share Tech', sans-serif;
-  font-size: 25px;
-  color: rgba(171, 178, 183, 0.884);
+  font-size: 28px;
+  color: rgba(200, 207, 211, 0.884);
   margin-top: 40px;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
+@media (max-width: 1200px) {
+  .about-us-container {
+    font-size: 3.8rem;
+  }
+}
 @media (max-width: 768px) {
   .about-us-container {
-    font-size: 40px;
+    font-size: 2.8rem;
   }
 
   #about-us-content {
@@ -80,5 +83,11 @@
 
   .aboutus-container {
     padding: 30px 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-us-container {
+    font-size: 1.5rem;
   }
 }

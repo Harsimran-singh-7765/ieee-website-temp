@@ -105,7 +105,7 @@ const Teams = () => {
 
   return (
     <div className="teams-wrapper">
-      <h2 className="teams-heading">OUR TEAM</h2>
+      <h2 className="teams-heading">MEET OUR TEAM</h2>
       <div className="teams-section">
         <div className="banner">
           <div
