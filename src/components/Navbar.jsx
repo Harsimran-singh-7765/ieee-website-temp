@@ -32,7 +32,7 @@ const Navbar = () => {
           <a href="#stats">About</a>
           <a href="#EVENTS">Events</a>
           <a href="#WIE">WIE</a>
-          <a href="#Teams">Team</a>
+          <a href="#team">Team</a>
           <a href="#GALLERY">Gallery</a>
           <a href="#Footer">Contact Us</a>
           
@@ -58,7 +58,7 @@ const Navbar = () => {
             <a href="#stats" onClick={closeMenu}>About</a>
             <a href="#EVENTS" onClick={closeMenu}>Events</a>
             <a href="#WIE" onClick={closeMenu}>WIE</a>
-            <a href="#Teams" onClick={closeMenu}>Team</a>
+            <a href="#team" onClick={closeMenu}>Team</a>
             <a href="#GALLERY" onClick={closeMenu}>Gallery</a>
             <a href="#Footer" onClick={closeMenu}>Contact Us</a>
             
