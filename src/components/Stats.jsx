@@ -36,7 +36,7 @@ const statsData = [
 const Stats = () => {
   useEffect(() => {
     const counters = document.querySelectorAll(".count");
-    const duration = 7000;
+    const duration = 2000;
     const interval = 20;
     const steps = Math.ceil(duration / interval);
 
