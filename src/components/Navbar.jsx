@@ -34,7 +34,7 @@ const Navbar = () => {
           <a href="#WIE">WIE</a>
           <a href="#Teams">Team</a>
           <a href="#GALLERY">Gallery</a>
-          <a href="#contact">Contact Us</a>
+          <a href="#Footer">Contact Us</a>
           
         </nav>
 
@@ -60,7 +60,7 @@ const Navbar = () => {
             <a href="#WIE" onClick={closeMenu}>WIE</a>
             <a href="#Teams" onClick={closeMenu}>Team</a>
             <a href="#GALLERY" onClick={closeMenu}>Gallery</a>
-            <a href="#footer" onClick={closeMenu}>Contact Us</a>
+            <a href="#Footer" onClick={closeMenu}>Contact Us</a>
             
           </motion.div>
         )}

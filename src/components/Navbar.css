@@ -101,15 +101,20 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.96);
+  
+  background: rgba(20, 20, 30, 0.55); /* Dark glass */
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px); /* Safari support */
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
   z-index: 10000;
   padding: 20px;
   gap: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
 }
 
 .mobile-overlay a {

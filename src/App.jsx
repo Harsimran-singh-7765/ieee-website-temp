@@ -64,8 +64,9 @@ function App() {
               <Gallery />
             </section>
           </main>
-
+          <section id="Footer">
           <Footer />
+          </section>
         </div>
         </Backgroundwrapper>
       )}

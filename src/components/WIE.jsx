@@ -87,7 +87,7 @@ useEffect(() => {
         </div>
 
         <div className="wie-right">
-          <h2>Our Events</h2>
+          <h2> </h2>
           <div className="gallery-container">
             <div className="slider" ref={sliderRef} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
               {galleryImages.map((img, index) => (
