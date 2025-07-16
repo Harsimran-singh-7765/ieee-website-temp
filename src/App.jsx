@@ -40,16 +40,16 @@ function App() {
               <Hero />
             </section>
 
-            <section id="stats" className="section">
+            <section id="ABOUT" className="section">
               <About />
             </section>
 
             <section id="stats" className="section">
               <Stats />
             </section>
-
-            <section id="GALLERY" className="section">
-              <Gallery />
+            
+            <section id="EVENTS" className="section">
+              <Slider />
             </section>
 
             <section id="WIE" className="section">
@@ -60,8 +60,8 @@ function App() {
               <Teams />
             </section>
 
-            <section id="EVENTS" className="section">
-              <Slider />
+            <section id="GALLERY" className="section">
+              <Gallery />
             </section>
           </main>
 

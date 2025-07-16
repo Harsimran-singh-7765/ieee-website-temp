@@ -82,6 +82,8 @@ const Stats = () => {
   }, []);
 
   return (
+    <div className="stats-wrapper">
+      <h2 className="stats-heading">OUR STATS</h2>
     <div className="stats-container">
       <div className="card__container">
         {statsData.map((stat, index) => (
@@ -109,6 +111,7 @@ const Stats = () => {
           </article>
         ))}
       </div>
+    </div>
     </div>
   );
 };
