@@ -119,9 +119,10 @@
   background: linear-gradient(to top, rgba(2, 2, 26, 0.2), transparent);
   color: #ffffff;
   padding: 15px 10px;
+   text-shadow: 0 0 15px #7f00ff;
 
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   z-index: 2;
   height: 100%;
 }

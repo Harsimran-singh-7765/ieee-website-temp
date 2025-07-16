@@ -15,28 +15,16 @@
 
 /* Title */
 .gallery-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  background: linear-gradient(90deg, #00c3ff 10%, #ffff1c 50%, #ff0061 90%, #00c3ff 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: brightness(1.2);
-  margin-bottom: 3vh;
-  margin-top: 3vh;
-  text-shadow:
-    0 4px 24px rgba(0,195,255,0.4),
-    0 2px 8px rgba(255,0,97,0.15),
-    0 1px 0 #fff;
-  animation: galleryFadeIn 1.3s cubic-bezier(0.4,0,0.2,1);
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 2px;
-  z-index: 100;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #f0f0f0;
+  text-shadow: 0 0 15px #7f00ff;
+  margin-top: 3rem;
 }
 
 @keyframes galleryFadeIn {
@@ -339,7 +327,7 @@
   }
 
   .gallery-title {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
 
   .gallery-macbook {

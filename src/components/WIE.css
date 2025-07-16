@@ -44,11 +44,13 @@
 }
 
 .wie-left p {
-  line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #d0d0d0;
 }
-
+.wie-left ul {
+  font-size: 1.2rem;
+  color: #d0d0d0;
+}
 
 .gallery-container {
   position: relative;
