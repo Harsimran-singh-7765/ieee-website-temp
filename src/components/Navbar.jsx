@@ -29,7 +29,7 @@ const Navbar = () => {
         {/* Desktop nav */}
         <nav className="nav-links desktop-only">
           <a href="#HOME">Home</a>
-          <a href="#stats">About</a>
+          <a href="#about">About</a>
           <a href="#EVENTS">Events</a>
           <a href="#WIE">WIE</a>
           <a href="#team">Team</a>
@@ -55,7 +55,7 @@ const Navbar = () => {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
             <a href="#HOME" onClick={closeMenu}>Home</a>
-            <a href="#stats" onClick={closeMenu}>About</a>
+            <a href="#about" onClick={closeMenu}>About</a>
             <a href="#EVENTS" onClick={closeMenu}>Events</a>
             <a href="#WIE" onClick={closeMenu}>WIE</a>
             <a href="#team" onClick={closeMenu}>Team</a>

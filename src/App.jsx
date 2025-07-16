@@ -39,14 +39,16 @@ function App() {
             <section id="HOME" className="section">
               <Hero />
             </section>
+            
+            <section id="stats" className="section">
+              <Stats />
+            </section>
 
             <section id="About" className="section">
               <About />
             </section>
 
-            <section id="stats" className="section">
-              <Stats />
-            </section>
+
             
             <section id="EVENTS" className="section">
               <Slider />
