@@ -10,19 +10,19 @@ const BackgroundWrapper = ({ children }) => {
 
     if (canvasRef.current) {
       thpaceInstance = ThpaceGL.create(canvasRef.current, {
-        colors: ["#ff0000ff", "#ffffffff", "#1e1e2f"], // 🖤💙 color scheme
+        colors: ["#000000", "#000000ff", "#000000"], // 🖤💙 color scheme
         triangleSize: 100,
         bleed: 50,
         noise: 20,
         noiseScalar: 1.5,
         pointVariationX: 25,
         pointVariationY: 25,
-        pointAnimationSpeed: 0.1,
+        pointAnimationSpeed: 0.2,
         particleCount: 50,
         particleOpacity: 0.4,
         particleRadius: 2,
         maxFps: 45,
-        THREE, 
+         // 🧠 pass in THREE manually
       });
     }
 
