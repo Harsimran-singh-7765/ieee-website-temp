@@ -77,7 +77,7 @@
       };
 
       const animationSequences = {
-        spin: ["Entry", "spin start", "spining", "spin end"],
+        spin: [ "spin start", "spining", "spin end"],
         greet: ["wave", "smile"],
         Idle: ["Idle"],
       };
@@ -121,10 +121,10 @@
       id: "About",
       position: { x: 29, y: -6, z: -6 },
       rotation: { x: 0, y: -0.1, z: 0 },
-      animation: "",
+      animation: "Idle",
     },
     {
-      id: "Stats",
+      id: "stats",
       position: { x: 29, y: -6, z: -6 },
       rotation: { x: 0, y: -0.1, z: 0 },
       animation: "Idle",
@@ -151,7 +151,7 @@
       id: "EVENTS",
       position: { x: 29, y: -6, z: -6 },
       rotation: { x: 0, y: 0.0, z: 0 },
-      animation: "Idle",
+      animation: "Excited",
     },
   ];
 
